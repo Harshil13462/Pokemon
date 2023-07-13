@@ -1,0 +1,342 @@
+{
+    "sea1": {
+        "frame": {
+            "x": 4,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea2": {
+        "frame": {
+            "x": 21,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea3": {
+        "frame": {
+            "x": 38,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea4": {
+        "frame": {
+            "x": 55,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea5": {
+        "frame": {
+            "x": 72,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea6": {
+        "frame": {
+            "x": 89,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea7": {
+        "frame": {
+            "x": 106,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sea8": {
+        "frame": {
+            "x": 123,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "water_rock": {
+        "frame": {
+            "x": 140,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sign1": {
+        "frame": {
+            "x": 157,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "sign2": {
+        "frame": {
+            "x": 174,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "encounter_grass": {
+        "frame": {
+            "x": 191,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "bush1": {
+        "frame": {
+            "x": 208,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "cut_tree": {
+        "frame": {
+            "x": 225,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "strength_rock": {
+        "frame": {
+            "x": 242,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "br_bush": {
+        "frame": {
+            "x": 259,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "bush2": {
+        "frame": {
+            "x": 276,
+            "y": 3,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "flower": {
+        "frame": {
+            "x": 4,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "water_rock2": {
+        "frame": {
+            "x": 21,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "grass1": {
+        "frame": {
+            "x": 38,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "grass2": {
+        "frame": {
+            "x": 55,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "grass3": {
+        "frame": {
+            "x": 72,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "grass4": {
+        "frame": {
+            "x": 89,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "bush3": {
+        "frame": {
+            "x": 106,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "hor_fence1": {
+        "frame": {
+            "x": 123,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "hor_fence2": {
+        "frame": {
+            "x": 140,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "ver_fence1, ver_fence2": {
+        "frame": {
+            "x": 157,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "cor_fence1": {
+        "frame": {
+            "x": 174,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "tl_bush": {
+        "frame": {
+            "x": 191,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "hor_bush": {
+        "frame": {
+            "x": 208,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "tr_bush": {
+        "frame": {
+            "x": 225,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "bush4": {
+        "frame": {
+            "x": 242,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "ver_bush": {
+        "frame": {
+            "x": 259,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "bl_bush": {
+        "frame": {
+            "x": 276,
+            "y": 20,
+            "w": 16,
+            "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    }
+}

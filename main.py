@@ -1,5 +1,21 @@
 import random
 import math
+from spritesheet import Spritesheet
+
+from pygame.locals import *
+import sys
+import os
+import pygame
+
+WIDTH = 720 # 15 wide
+HEIGHT = 480 # 10 tall
+
+pygame.init()
+
+font = pygame.font.Font('freesansbold.ttf', 14)
+
+fpsClock = pygame.time.Clock()
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 TYPES = ['Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dark', 'Dragon', 'Steel', 'Fairy', None]
 CHART = {0: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 0, 1, 1, 0.5, 1, 1], 
@@ -100,6 +116,26 @@ def battle(mon1, mon2):
         print(f"Mon 2: {mon2.hp}")
     print(winner)
 
-bulb1 = Pokemon('Bulby1', [1, 2], 1, 100)
-bulb2 = Pokemon('bulby2', [1, 2], 1, 100)
-battle(bulb1, bulb2)
+# bulb1 = Pokemon('Bulby1', [1, 2], 1, 100)
+# bulb2 = Pokemon('bulby2', [1, 2], 1, 100)
+# battle(bulb1, bulb2)
+
+running = True
+fps = 60
+bg_spritesheet = Spritesheet('data/sprites/main/Temp_tileset.png')
+grass = bg_spritesheet.get_sprite(4, 3, 16, 16)
+
+while running == True:
+    pygame.draw.rect(screen, (0, 0, 0), (0, 0, WIDTH, HEIGHT))
+    pygame.display.set_caption("Pokemon")
+    events = pygame.event.get()
+    for event in events:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_ESCAPE:
+                running = False
+        if event.type == pygame.QUIT:
+            running = False
+    screen.blit(grass, (0, 0))
+    pygame.display.flip()
+    fpsClock.tick(fps)
+    continue
