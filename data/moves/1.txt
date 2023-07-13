@@ -1,0 +1,6 @@
+Pound
+Normal
+Physical
+35
+40
+100
