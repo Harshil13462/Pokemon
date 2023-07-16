@@ -109,7 +109,7 @@
         "rotated": false,
         "trimmed": false
     },
-    "encounter_grass": {
+    "grass5": {
         "frame": {
             "x": 191,
             "y": 3,
@@ -214,7 +214,7 @@
             "x": 72,
             "y": 20,
             "w": 16,
-            "h": 16
+            "h": 19
         },
         "rotated": false,
         "trimmed": false
@@ -229,12 +229,12 @@
         "rotated": false,
         "trimmed": false
     },
-    "bush3": {
+    "player": {
         "frame": {
             "x": 106,
             "y": 20,
             "w": 16,
-            "h": 16
+            "h": 19
         },
         "rotated": false,
         "trimmed": false
@@ -335,6 +335,36 @@
             "y": 20,
             "w": 16,
             "h": 16
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "playeru": {
+        "frame": {
+            "x": 4,
+            "y": 37,
+            "w": 16,
+            "h": 19
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "playerl": {
+        "frame": {
+            "x": 21,
+            "y": 37,
+            "w": 16,
+            "h": 19
+        },
+        "rotated": false,
+        "trimmed": false
+    },
+    "playerr": {
+        "frame": {
+            "x": 38,
+            "y": 37,
+            "w": 16,
+            "h": 19
         },
         "rotated": false,
         "trimmed": false

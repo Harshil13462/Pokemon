@@ -6,9 +6,10 @@ from pygame.locals import *
 import sys
 import os
 import pygame
+import time
 
 WIDTH = 720 # 15 wide
-HEIGHT = 480 # 10 tall
+HEIGHT = 480 # 11 tall
 
 pygame.init()
 
@@ -120,10 +121,73 @@ def battle(mon1, mon2):
 # bulb2 = Pokemon('bulby2', [1, 2], 1, 100)
 # battle(bulb1, bulb2)
 
+bg_spritesheet = Spritesheet('data/sprites/main/Temp_tileset.png')
+
+names = ["sea1", "sea2", "sea3", "sea4", "sea5", "sea6", "sea7", "sea8", "water_rock", "sign1", "sign2", "grass5", "bush1", "cut_tree", "strength_rock", "br_bush", "bush2", "flower", "water_rock2", "grass1", "grass2", "grass3", "grass4", "player", 'hor_fence1', 'hor_fence2', 'ver_fence1, ver_fence2', 'cor_fence1', 'tl_bush', 'hor_bush', 'tr_bush', 'bush4', 'ver_bush', 'bl_bush', 'playeru', 'playerl', 'playerr']
+
+main_map = []
+
+for i in range(40):
+    main_map.append(["sea2" for j in range(1000)])
+for i in range(920):
+    main_map.append(["sea2" for j in range(40)] + ["grass" + str(random.randint(1, 5)) for j in range(920)] + ["sea2" for j in range(40)])
+for i in range(40):
+    main_map.append(["sea2" for j in range(1000)])
+
+print(len(main_map))
+
+sprites_dict = {}
+for i in names:
+    sprites_dict[i] = bg_spritesheet.parse_sprites(i)
+
+def get_coords(x, y):
+    return x * 48, y * 48
+
+TIME_DIF = 0.1
+
+class Background:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.timer = -1
+        self.dir = ""
+    def sim(self, pressed_keys):
+        if pressed_keys[K_RIGHT] and (main_map[self.y][self.x + 1][:3] != "sea"):
+            if time.time() - self.timer >= TIME_DIF:
+                self.x += 1
+                self.timer = time.time()
+                self.dir = "r"
+        elif pressed_keys[K_LEFT] and (main_map[self.y][self.x - 1][:3] != "sea"):
+            if time.time() - self.timer >= TIME_DIF:
+                self.x -= 1
+                self.timer = time.time()
+                self.dir = "l"
+        elif pressed_keys[K_DOWN] and (main_map[self.y + 1][self.x][:3] != "sea"):
+            if time.time() - self.timer >= TIME_DIF:
+                self.y += 1
+                self.timer = time.time()
+                self.dir = ""
+        elif pressed_keys[K_UP] and (main_map[self.y - 1][self.x][:3] != "sea"):
+            if time.time() - self.timer >= TIME_DIF:
+                self.y -= 1
+                self.timer = time.time()
+                self.dir = "u"
+        for i in range(self.y - 5, self.y + 6):
+            for j in range(self.x - 7, self.x + 8):
+                screen.blit(sprites_dict[main_map[i][j]], get_coords(j + 7 - self.x, i + 5 - self.y))
+        screen.blit(sprites_dict["player" + self.dir], [get_coords(7, 5)[0], get_coords(7, 5)[1] - 9])
+
+bg = Background(50, 50)
+
 running = True
 fps = 60
-bg_spritesheet = Spritesheet('data/sprites/main/Temp_tileset.png')
-grass = bg_spritesheet.get_sprite(4, 3, 16, 16)
+
+class Player():
+    def __init__(self):
+        self.team = []
+    def catchPokemon(self, mon):
+        self.team.append(mon)
+
 
 while running == True:
     pygame.draw.rect(screen, (0, 0, 0), (0, 0, WIDTH, HEIGHT))
@@ -135,7 +199,8 @@ while running == True:
                 running = False
         if event.type == pygame.QUIT:
             running = False
-    screen.blit(grass, (0, 0))
+    # screen.blit(sprites_dict['flower'], (0, 0))
+    bg.sim(pygame.key.get_pressed())
     pygame.display.flip()
     fpsClock.tick(fps)
     continue
